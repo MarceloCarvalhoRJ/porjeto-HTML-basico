@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Básico</title>
+  <style>
+      body {
+          background-color: #d9dceb;
+          margin: 0%;
+      }
+      main {
+          color: #002147;  
+          margin: 10px;
+          text-align: justify;
+          line-height: 25px;
+          padding: 10px;
+      }
+
+      header {
+          background-image: linear-gradient(to top, #3A5DC7, #d9dceb);
+          width: 100%;
+      }
+
+      h1#titulo {
+          color:#010d1a;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 45px;
+          text-shadow: 2px 2px 2px #010d1a84;
+          text-align: center;
+          margin: 0%;
+          padding: 20px;
+          padding-top: 20px;
+          font-weight: lighter;
+      }
+
+      h1#tags {
+          background-image: linear-gradient(to right, #005dc7c5, transparent);
+          font-weight: bold;
+          margin-top: 30px;
+          margin-bottom: 20px;
+          height: 35px;
+          border-radius: 10px;
+          padding-left: 7px;
+          padding-top: 7px;
+          }
+
+      main > h1, h2, h3 {
+          color: #18304D;
+      }
+
+      p {
+          font-family: Arial, Helvetica, sans-serif;font-size: 16px;    
+      }
+
+      ol {
+          font-family: Arial, Helvetica, sans-serif;font-size: 16px;
+      }
+      
+      img#elemento {
+               height: 170px;
+               width: 600px;
+      }
+
+      img#atributo {
+               height: 120px;
+               width: 600px;
+      }
+
+      footer {
+          background-color: #18304D;
+          color: aliceblue;
+          text-align: center;
+          margin: 0%;
+          padding: 5px;
+      }
+
+      a#externo {
+          text-decoration: none;
+          color: aliceblue;
+          font-weight: bold;
+      }
+
+      a#externo::after {
+          content: '\00A0\1F517';
+      }
+
+      a#externo:hover {
+          background-color: #18304D;
+          color: #3A5DC7;
+          text-decoration: underline;
+      }
+
+      #indice-tags {
+            columns: 2;
+      }
+
+      button {
+          background-color: #d9dceb;
+          text-decoration: none;
+          border-radius: 5px;
+          border: none;
+      }
+
+      button:hover {
+          background-color:  #7DA4D0;        
+      }
+
+     a {
+        text-decoration: none;
+     }
+     a:hover {
+        color: #035dc5;
+        text-decoration: underline;
+     }
+  </style>
+</head>
+<body>
+   <header>
+      <h1 id="titulo">Meus primeiros passos com HTML</h1>
+      <hr>
+   </header>
+   <main>
+       <h1><strong>Entendendo o HTML</strong></h1>
+           <p>HTML (Linguagem de Marcação de Hipertexto) é o código que você usa para estruturar uma página web e seu conteúdo. Por exemplo, o conteúdo pode ser estruturado em parágrafos, em uma lista com marcadores ou usando imagens e tabelas.</p>
+           <p>HTML não é uma linguagem de programação; é uma linguagem de marcação, usada para definir a estrutura do seu conteúdo. HTML consiste de uma série de elementos, que você usa para delimitar ou agrupar diferentes partes do conteúdo para que ele apareça ou atue de determinada maneira. As tags que vamos ver mais no detalhe  podem transformar uma palavra ou imagem num hiperlink, pode colocar palavras em itálico, pode aumentar ou diminuir a fonte e assim por diante</p>
+      <h2>Anatomia do HTML</h2>
+          <p>Vamos explorar a Tag parágrafo:</p>
+          <img id="elemento" src="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics/gato-rabujento-pequeno.png" alt="anatomia de um elemento HTML">
+          <ol>
+              <li>A <strong>tag de abertura</strong>: Consiste no nome do elemento (no caso, p), envolvido em parênteses angulares de abertura e fechamento. Isso demonstra onde o elemento começa, ou onde seu efeito se inicia — nesse caso, onde é o começo do parágrafo.</li>
+              <li>A <strong>tag de fechamento</strong>: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais comuns de iniciantes e pode levar a resultados estranhos.</li>
+              <li>O <strong>conteúdo</strong>: Esse é o conteúdo do elemento, que nesse caso é apenas texto.</li>
+              <li>O <strong>elemento</strong>: A tag de abertura, a de fechamento, e o conteúdo formam o elemento.</li>
+              </ol>
+          <p>Elementos também podem ter atributos:</p>
+          <img id="atributo" src="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics/gato-rabujento-atributo-pequeno.png" alt="inserindo o atributo class dentro da tag parágrafo">
+          <p>O atributo class permite que você forneça ao elemento um identificador que possa ser usado posteriormente para aplicar ao elemento informações de estilo e outras coisas.</p>
+          <p>Um atributo sempre deve ter:</p>
+            <ol>
+                <li>Um espaço entre ele e o nome do elemento (ou o atributo anterior, se o elemento já tiver um).</li>
+                <li>O nome do atributo, seguido por um sinal de igual.</li>
+                <li>Aspas de abertura e fechamento, envolvendo todo o valor do atributo.</li>
+            </ol>
+       <h1 id="tags">As Tags (elementos) mais usadas no HTML</h1>
+           <h3>Indice</h3>
+           <ul id="indice-tags">
+                <li><a href="#h1">&lt;h1&gt;</a></li>
+                <li><a href="#p">&lt;p&gt;</a></li>
+                <li><a href="#mark">&lt;mark&gt;</a></li>
+                <li><a href="#small">&lt;small&gt;</a></li>
+                <li><a href="#i">&lt;i&gt;</a></li>
+                <li><a href="#u">&lt;u&gt;</a></li>
+                <li><a href="#strong">&lt;strong&gt;</a></li>
+                <li><a href="#tag-ol">&lt;ol&gt;</a></li>
+                <li><a href="#tag-ul">&lt;ul&gt;</a></li>
+                <li><a href="#tag-a">&lt;a&gt;</a></li>
+                <li><a href="#hr">&lt;hr&gt;</a></li>
+                <li><a href="#sub">&lt;sub&gt;</a></li>
+                <li><a href="#tag-sup">&lt;sup&gt;</a></li>
+                <li><a href="#blockquote">&lt;blockquote&gt;</a></li>
+                <li><a href="#del">&lt;del&gt;</a></li>
+                <li><a href="#abbr">&lt;abbr&gt;</a></li>
+           </ul>
+           <h2 id="h1"><span>&lt;h1&gt;</span> - &lt;h6&gt; Cabeçalhos de seção (títulos)</h2>
+           <p>Elementos de cabeçalho (títulos) são implementados em seis níveis, &lt;h1&gt; é o mais importante e &lt;h6&gt; é o de menor importância. Um elemento de cabeçalho descreve brevemente o tópico da seção em que ele está. Obs. O tamanho da fonte vai diminuindo conforme a importancia.</p>
+           <button> <a id="button" href="#tags"><small>Voltar</small></a></button>
+           <h2 id="p"><span>&lt;p&gt;</span> o Parágrafo</h2>
+           <p>No HTML, parágrafos são usados para agrupar conteúdos relacionados de qualquer tipo, como imagens e campos de um formulário.</p>
+           <h2 id="mark"><span>&lt;mark&gt;</span></h2>
+           <p>O Elemento HMTL &lt;mark&gt; representa um trecho de destaque em um texto, por exemplo, uma sequência de texto marcado como referência, devido à sua relevância em um contexto particular. </p>
+           <button> <a id="button" href="#tags"><small>Voltar</small></a></button>
+           <h2 id="small"><span>&lt;small&gt;</span></h2>
+           <p>Serve para deixar o trecho de um texto menor, muito utilizado na confeções de contratos (textos legais) e também para direitos autorais.</p>
+           <h2 id="i"><span>&lt;i&gt;</span></h2>
+           <p>O elemento HTML &lt;i&gt; representa uma parte do texto que é destacada do restante por algum motivo, por exemplo, termos técnicos, expressões de outros idiomas ou pensamentos de personagens fictícios. Normalmente, é apresentado com o uso do tipo "itálico".</p>
+               <blockquote>
+                   <h2> &lt;i&gt;  vs  &lt;em&gt; </h2>
+                   <p>É frequentemente confuso para novos desenvolvedores porque há vários elementos para expressar a ênfase em algum texto. &lt;i&gt; e &lt;em&gt; são talvez uns dos mais comuns. Por que usar &lt;em&gt; vs &lt;i&gt;? Eles produzem o mesmo resultado, certo?</p>
+                 
+                   <p>Não exatamente. O resultado visual é, por padrão, o mesmo - ambas as tags renderizam seu conteúdo em itálicos. Mas o significado semântico é diferente. A tag &lt;em&gt; representa ênfase importante de seus conteúdos, enquanto que a tag &lt;i&gt; representa o texto que é iniciado de uma prosa, como uma palavra estrangeira, pensamentos de um personagem ficcional, ou quando o texto se refere á definição de uma palavra em vez de representar seu significado semântico. (O título de um trabalho, tal como o nome de um livro ou filme, deve usar &lt;cite&gt;.)</p>
+                 
+                   <p>Um exemplo para &lt;em&gt; poderia ser: "Apenas já faça isso!", ou: "Nós temos que fazer algo acerca disso". Uma pessoa ou software lendo o texto pronunciaria as palavras em itálico com uma ênfase.</p>
+                 
+                   <p>Um exemplo para &lt;i&gt; poderia ser: "A Rainha Mary velejou na noite passada". Aqui, não é adicionada ênfase ou importância na palavra "Rainha Mary". É meramente indicado que o objeto em questão não é uma rainha chamada Mary, mas um navio chamado Rainha Mary. Outro exemplo para &lt;i&gt; poderia ser: "A palavra o é um artigo".</p>
+               </blockquote>
+               <button> <a id="button" href="#tags"><small>Voltar</small></a></button>
+           <h2 id="u"> &lt;u&gt; Sublinhado</h2>
+           <p>Pode aplicar em um trecho ou palavra de um texto onde se quer dar destaque. <br> Obs.Voce pode usar também esse estilo com o CSS <u>text-decoration</u> propriedade underline.</p>
+           <h2 id="strong">&lt;strong&gt;</h2>
+           <p>O elemento HTML &lt;strong&gt; dá ao texto uma forte importância, e é tipicamente mostrado em negrito. É utilizado em conteúdos que são de "grande importância", incluindo coisas de urgentes (como alertas). Podem ser sentenças que são de grande importância para toda a página, ou, você pode meramente tentar pontuar que algumas palavras são de grande importância, comparado ao conteúdo próximo.</p>
+           <p>Tipicamente, estes elementos são renderizados por padrão, usando fontes em negrito. Contudo, ele não deve ser usado para simplesmente aplicar o estilo negrito; use o CSS font-weight para este propósito. Use o elemento &lt;b&gt; para chamar a atenção para certos textos sem a indicação de grande nível de importância.</p>
+           <blockquote>
+                <h2>Bold vs. Strong</h2>
+                <p>Muitas vezes é confuso para novos desenvolvedores porque há tantas maneiras de expressar a mesma coisa em um website renderizado. Bold e Strong são talvez um dos casos mais comuns. Porque usar &lt;strong&gt; vs &lt;b&gt;? Você precisa digitar muito mais ao usar strong e ela produz o mesmo resultado, certo?</p>
+                <p>Talvez não; strong é um estado lógico, e bold é um estado físico. Estados lógicos separam apresentação do conteúdo, e ao fazer isso permitem que ele seja expresso de várias maneiras diferentes. Possivelmente em vez de renderizar um texto como negrito você queira renderizá-lo vermelho, ou num tamanho diferente, ou sublinhado, ou seja lá o que for. Faz mais sentido mudar as propriedades de apresentação de strong do que bold. Isto porque bold é um estado físico; não há separação entre a apresentação e o conteúdo, e fazer com que bold faça qualquer outra coisa diferente de deixar o texto em negrito seria confuso e ilógico.</p>
+                <p>É importante notar que <b></b> tem outros usos, quando se quer chamar atenção sem aumentar a importância.</p>
+           </blockquote>
+           <button> <a id="button" href="#tags"><small>Voltar</small></a></button>
+           <h2 id="tag-ol">&lt;ol&gt;</h2>
+           <p>O Elemento HTML &lt;ol&gt; representa uma lista de itens ordenados. De forma característica esses itens ordenados em uma lista são mostrados com uma contagem que os precede, que pode ser de qualquer tipo, como numerais, letras, algarismos romanos, ou simples símbolos. </p>
+           <p>dentro da lista (elemento pai) devemos usar o elemento &lt;li&gt; (elemento filho) para representar os itens da lista.</p>
+           <h2 id="tag-ul">&lt;ul&gt;</h2>
+           <p>Representa uma lista de itens sem ordem rígida, isto é, uma coleção de itens que não trazem uma ordenação numérica e as suas posições, nessa lista, são irrelevantes. Caracteristicamente, os itens em uma lista desordenada são exibidos com um marcador que pode ter várias formas, como um ponto, um círculo, ou um quadrado. O tipo de marcador não é definido na descrição HTML da página, mas na CSS associada, utilizando a propriedade <u>list-style-type</u>. </p>
+           <p>Também deverá ter um elemento filho &lt;li&gt; para representar os itens da lista.</p>
+           <button> <a id="button" href="#tags"><small>Voltar</small></a></button>
+           <h2 id="tag-a">&lt;a&gt;</h2>
+           <p>O elemento &lt;a&gt; em HTML (ou elemento âncora), com o atributo <strong>href</strong> cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada &lt;a&gt; precisará indicar o destino do link.</p>
+               <blockquote>
+                <h3>target</h3>
+                <p>Esse atributo é utilizado dentro da tag &lt;a&gt; para informar se o link será aberto: </p>
+                    <ul>
+                      <li><strong>_self</strong>: na mesma página de pesquisa. (Default)</li>
+                      <li><strong>_blank</strong>: normalmente abre em uma nova aba, porém usuários podem configurar seus navegadores para abrir em uma nova janela.</li>
+                      <li><strong>_top</strong>: o contexto de navegação mais alto (o contexto "mais alto" que é um ancestral do atual). Se não há ancestrais, comporta-se como._self</li>
+                      <li><strong>_parent</strong>: o contexto de navegação mais alto (o contexto "mais alto" que é um ancestral do atual). Se não há ancestrais, comporta-se como._self</li>
+                    </ul>
+               </blockquote>
+               <button> <a id="button" href="#tags"><small>Voltar</small></a></button>
+           <h2 id="hr">&lt;hr&gt;</h2>
+           <p>O elemento HTML &lt;hr&gt; representa uma quebra temática entre elementos de nível de parágrafo (por exemplo, uma mudança da cena de uma história, ou uma mudança de tema com uma seção). Nas versões anteriores do HTML, representava uma linha horizontal. Pode continuar sendo exibida como uma linha horizontal nos navegadores, mas agora está definida em termos semânticos, em vez de termos de apresentação.</p>
+           <h2 id="sub">&lt;sub&gt;</h2>
+           <p>O elemento &lt;sub&gt; HTML especifica no texto o que deve ser exibido como subscrito. Os subscritos são normalmente renderizados com uma linha de base reduzida usando texto menor.Ex.: o 2 do H<sub><b>2</b></sub>O.</p>
+           <h2 id="tag-sup">&lt;sup&gt;</h2>
+           <p>É o mesmo que o sup, mas o texto é exibido como sobrescrito. Ex.: É o 2 do x <sup><b>2</b></sup>. </p>
+           <h2 id="blockquote">&lt;Blockquote&gt;</h2>
+           <p>O Elemento HTML &lt;Blockquote&gt; (ou Elemento HTML de citação de bloco) indica que o texto incluído é uma longa citação. Normalmente, este é processado visualmente pelo recuo. A URL para a fonte da citação pode ser dada usando o atributo <b>cite</b>.</p> 
+           <h2 id="del">&lt;del&gt;</h2>
+           <p>O elemento HTML &lt;del&gt; (ou Elemento HTML de Texto Excluído) representa uma parte do texto que foi excluída de um documento. Este elemento é (não necessariamente) renderizado pelos navegadores com uma linha entre o texto.</p>
+           <h2 id="abbr">&lt;abbr&gt;</h2>
+           <p>O Elemento _HTML &lt;abbr&gt; (ou Elemento de Abreviação HTML) representa uma abreviação e opcionalmente fornece uma descrição completa para ela. Se presente, o atributo <b>title</b> deve conter a descrição completa e apenas ela.</p> 
+           <button> <a id="button" href="#tags"><small>Voltar</small></a></button>
+          
+   </main>
+   <footer>
+       site criado por Marcelo Carvalho referente ao 1º projeto da <a id="externo" href="https://www.dio.me/" target="_blank">DIO.me</a>
+   </footer>
+</body>
+</html>
